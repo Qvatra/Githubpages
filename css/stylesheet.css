@@ -12,7 +12,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, .header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	padding: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, .header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
@@ -63,12 +63,12 @@ a:hover {
   color: #c5000c;
 }
 
-header {
+.header {
   padding-top: 35px;
   padding-bottom: 25px;
 }
 
-header h1 {
+.header h1 {
   font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 48px; font-weight: 900;
   line-height: 1.2;
@@ -76,7 +76,7 @@ header h1 {
   letter-spacing: -1px;
 }
 
-header h2 {
+.header h2 {
   font-size: 24px;
   font-weight: normal;
   line-height: 1.3;
@@ -96,10 +96,6 @@ header h2 {
 
 #container .inner img {
   max-width: 100%;
-}
-
-#downloads {
-  margin-bottom: 40px;
 }
 
 a.button {
@@ -150,19 +146,6 @@ a.button span {
   display: block;
   height: 23px;
   padding-left: 50px;
-}
-
-#download-zip span {
-  background: transparent url(../images/zip-icon.png) 12px 50% no-repeat;
-}
-#download-tar-gz span {
-  background: transparent url(../images/tar-gz-icon.png) 12px 50% no-repeat;
-}
-#view-on-github span {
-  background: transparent url(../images/octocat-icon.png) 12px 50% no-repeat;
-}
-#view-on-github {
-  margin-right: 0;
 }
 
 code, pre {
@@ -350,15 +333,9 @@ footer a:hover {
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
-  header {
+  .header {
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-  #downloads {
-    margin-bottom: 25px;
-  }
-  #download-zip, #download-tar-gz {
-    display: none;
   }
   .inner {
     width: 100%;
