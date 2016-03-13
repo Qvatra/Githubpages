@@ -12,7 +12,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, .header, hgroup,
+figure, figcaption, .footer, .header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	padding: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, .header, hgroup, menu, nav, section {
+.footer, .header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
@@ -179,7 +179,6 @@ ul, ol, dl {
   margin-bottom: 20px;
 }
 
-
 /* COMMON STYLES */
 
 hr {
@@ -293,7 +292,7 @@ dl dt {
   color: #303030;
 }
 
-footer {
+.footer {
   padding-top: 20px;
   padding-bottom: 30px;
   margin-top: 40px;
@@ -302,10 +301,10 @@ footer {
   background: transparent url('../images/hr.png') 0 0 no-repeat;
 }
 
-footer a {
+.footer a {
   color: #666;
 }
-footer a:hover {
+.footer a:hover {
   color: #444;
 }
 

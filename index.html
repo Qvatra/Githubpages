@@ -17,7 +17,32 @@
 </head>
 
 <body>
-    <div id="header"></div>
+    <div role="navigation" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand pseudolink">Game Assets</div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a class="pseudolink">Home</a></li>
+                    <li><a href="sprites.html">Sprites</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
 
     <div id="container">
         <div class="inner container-fluid">
@@ -25,8 +50,8 @@
             <div class="header">
                 <h1>Game assets</h1>
                 <h2>How to build game graphics in details</h2>
-            </header>
-            
+            </div>
+
             <hr/>
 
             <div class="col-xs-3 green">0</div>
@@ -34,8 +59,8 @@
             <div class="col-xs-5 blue">0</div>
 
             <p>
-                This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your
-                page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>,
+                This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content
+                here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>,
                 select a template crafted by a designer, and publish. After your page is generated, you can check out the
                 new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and
                 you’ll see the new branch.
@@ -43,12 +68,14 @@
 
         </div>
     </div>
+    </div>
 
-    <div id="footer"></div>
+    <div class="myfooter text-center">
+        <hr/>Game assets 2016 &copy;
+    </div>
 
     <script src="scripts/jquery.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/header.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 
