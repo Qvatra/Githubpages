@@ -62,6 +62,7 @@ h4, h5 {
 }
 
 .anatomy1 {
+    border: 1px solid lightgrey;
     float: right;
     width: 250px;
     margin: 0 0 5px 15px;
@@ -196,4 +197,41 @@ h4, h5 {
 
 .blue {
     background: blue;
+}
+
+.responsive {
+    background: green;
+}
+
+
+
+.carousel-control { width: 4%; }
+.carousel-control.left,.carousel-control.right { margin-left: 15px; background-image: none; }
+.carousel-col { position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; }
+@media (max-width: 600px) {
+	.carousel-inner .active.left { left: -100%; }
+	.carousel-inner .next        { left:  100%; }
+	.carousel-inner .prev		 { left: -100%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+    .responsive {
+        background: red;
+    }
+    .carousel-col {
+            width: 100%;
+    }
+}
+@media (min-width: 600px) {
+	.carousel-inner .active.left { left: -50%; }
+	.carousel-inner .next        { left:  50%; }
+	.carousel-inner .prev		 { left: -50%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+	.active > div:first-child + div { display:block; }
+    .responsive {
+        background: blue;
+    }
+    .carousel-col {
+            width: 50%;
+    }
 }
