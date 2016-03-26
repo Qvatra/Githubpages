@@ -9,11 +9,12 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Game assets</title>
+    <title>Sprite animation software for 2d games</title>
 </head>
 
 <body>
@@ -28,15 +29,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <div class="navbar-brand pseudolink">Game Assets</div>
+                <div class="navbar-brand pseudolink">Sprite tools</div>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a class="pseudolink">Home</a></li>
-                    <li><a href="sprites.html">Sprites</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="showroom.html">Showroom</a></li>
+                    <li><a href="contact.html">Tutorials</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -46,10 +47,115 @@
 
     <div id="container">
         <div class="inner container-fluid">
-
             <div class="header">
-                <h1>Game assets</h1>
-                <h2>How to build game graphics in details</h2>
+                <h1>Sprite animation for games</h1>
+                <h2>How to make game graphics in details</h2>
+                <div class="row">
+                    <div id="robo1" class="robo1"></div>
+                    <h3>How 2D animation works</h3>
+                    <h5>
+                        In 2D game graphics, a <strong>sprite</strong> is an animation that is integrated into a game background.
+                        2D sprite animation is presented as a sequence of static key-frames and called a sprite sheet.
+                        Sprite sheet usually contains all possible animations for a given character (or even for a game scene).
+                        During runtime engine of a game uses a sprite sheet to select neened key-frames for a current animation.
+                        The easiest way to make an animation and a sprite sheet is to use an animator.
+                    </h5>
+                </div>
+
+                <div class="row top-padding">
+                    <h3>Anatomy 2D animator</h3>
+                    <img id="anatomy1" class="anatomy1" src="images/girl760.jpg" alt="image of Anatomy animator" title="Anatomy sprite animator software">
+                    <h5>
+                        Anatomy animator was developed to create 2D animated sprites and sprite sheets quickly and easily.
+                        Animator represents sprite animation model as a skeleton that consist of adjustable bones.
+                        Each bone represent movable part of a model and requires a texture. 
+                        Each frame of an animation corresponds to a specific set of bone's coordinates.
+                        This structure allows you to modify animation in a very efficient way.
+                        Changing bone configuration modifies separate frame but changing texture configuration modifies bone appearence for an entire animation.                            
+                        This makes it possible to re-use models applying different textures. 
+                        Software automatically packs all frames of an animated sprite into a single sprite sheet image or saves animation as a set of frames.
+                    </h5>
+                </div>
+
+                <div class="row top-padding">
+                    <div class="colorContainer">
+                        <h3 class="text-center top-padding">Why Anatomy animator?</h3>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <h5><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Real time editing</h5>
+                                <h6>
+                                    This feature allows you regardless your drawing skills or anatomy knowledge produce professional 2D animations.
+                                    Software has 2 view panels: preview panel plays an animation in a loop while you do changes on the edit panel.
+                                    As a result you can always see which tweaks make your animation look better.
+                                </h6>
+                            </div>
+                            <div class="col-xs-6">
+                                <h5><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Skeleton-based model</h5>
+                                <h6>
+                                    All movable parts of a model are represented as bones with textures.
+                                    Replacing texture for a selected bone will automatically replace texture in an entire animation.
+                                    This makes it possible to create different characters using the same model but different textures.
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <h5><span class="glyphicon glyphicon-film" aria-hidden="true"></span> Transition effect</h5>
+                                <h6>
+                                    This feature allows to create a transition state for a bone by averaging coordinates between two different key-frames.
+                                    Transition is used for fast animation of model parts or could be applied to a whole frame to make the animation smoother.
+                                </h6>
+                            </div>
+
+                            <div class="col-xs-6">
+                                <h5><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> JSON compatible</h5>
+                                <h6>
+                                    Software produces JSON formatted text file that contains all bones configurations for all frames.
+                                    Game engine can use that info to combine all textures together according to a model.
+                                    This might save you a lot of space especially if you have too many animations in a game scene. 
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <h5><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Always with you</h5>
+                                <h6>
+                                    Anatomy is a Chrome app and would be always available via your Chrome apps.
+                                    Use it wherever you go - just log in your google account.
+                                    And yes - it works offline!
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="text-center top-margin">
+                            <a id="storeBtn" class="btn btn-success btn-lg" href="https://chrome.google.com/webstore/detail/anatomy-sprite-animator-2/ihligbifffjddjffdiapccakkdglodcj"
+                            target="_blank" title="Anatomy Sprite Animator in Chrome web store">Get Anatomy Sprite Animator</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <h3>How to make a sprite sheet</h3>
+                <h5>
+                    The easiest way to create an animation and a sprite sheet is to use Anatomy2 animator.
+                </h5>
+
+
+                <h5>
+                    If you are an art designer, you have probably already faced the problem of creating an unique animated character.
+                Creating an entire sprite sheet in a graphical editor is very inefficient and tricky work. Creating a sprite
+                animation and a sprite sheet could be tricky and tedious work for any designer. From now on animation of
+                a character for 2D games will become a very easy task due to our sprite animator software - Anatomy2. The
+                ....... In our website you can also find video tutorials and learn to draw vector graphics. It's easier than
+                you think! In addition our free set of models and textures will help you to kickstart your first character.
+                ....... In this site you will learn how to draw vector graphics, how to convert raster graphics into vector
+                graphics, how to animate a picture or even a photo using skeletal or bone technique and create a 2D sprite,
+                how to make a sprite sheet and a gif animation.
+                </h5>
+                <h4>Welcome to our website!</h4>
+                <h6>
+                    You can use a sprite sheet to create animation directly through your code or just simply import it to Unity.
+                </h6>
             </div>
 
             <hr/>
@@ -70,8 +176,8 @@
     </div>
     </div>
 
-    <div class="myfooter text-center">
-        <hr/>Game assets 2016 &copy;
+    <div class="myfooter text-center fixed">
+        <hr/>Sprite tools 2016 &copy;
     </div>
 
     <script src="scripts/jquery.min.js"></script>

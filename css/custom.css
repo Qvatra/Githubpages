@@ -4,16 +4,107 @@ body {
 }
 
 .myfooter {
-    position: fixed;
     padding-bottom: 5px;
-    bottom: 0px;
     width: 100%;
     background: #e7e7e7 url(../images/body-bg.png) 0 0 repeat;
 }
 
-.myfooter hr {
+.myfooter-fixed {
+    position: fixed;
+    bottom: 0px;
+    padding-bottom: 5px;
+    width: 100%;
+    background: #e7e7e7 url(../images/body-bg.png) 0 0 repeat;
+
+}
+
+.myfooter hr,
+.myfooter-fixed hr {
     margin: 0px;
     padding: 5px;
+}
+
+h4, h5 {
+    color: #6d6d6d;
+    text-align:justify;
+}
+
+.colorContainer {
+    padding: 15px;
+    background: cornflowerblue;
+    text-shadow: none;
+}
+
+.colorContainer h3,
+.colorContainer h5,
+.colorContainer span{
+    color: white;
+}
+
+.colorContainer h5 {
+    padding-top: 10px; 
+}
+
+.colorContainer h6 {
+    text-align: justify; 
+}
+
+.row {
+     margin-right: 0;
+     margin-left: 0; 
+}
+
+.top-padding { 
+    padding-top: 10px; 
+}
+
+.top-margin { 
+    margin-top: 10px; 
+}
+
+.anatomy1 {
+    float: right;
+    width: 250px;
+    margin: 0 0 5px 15px;
+    -webkit-transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
+    -moz-transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
+    -o-transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
+}
+
+.anatomy1b {
+    /*width: 254px;
+    margin:-2px -2px 8px 13px;*/
+    -ms-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+.anatomy1a {
+    -ms-transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.scaleup {
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.scaledown {
+    -ms-transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+}
+
+.btn-lg {
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 25px;
 }
 
 .pseudolink {
@@ -24,6 +115,48 @@ body {
     -moz-user-select: none;      /* Firefox */
     -ms-user-select: none;       /* IE/Edge */
     user-select: none;           /* non-prefixed version, currently not supported by any browser */
+}
+
+.robo1 {
+    margin: 15px 15px 0 0;
+    float: left;
+    width: 140px;
+    height: 200px;
+    background-image: url("../images/robo1.png");
+}
+
+.robo1a {
+    background-image: url("../images/robo1.png");
+    -webkit-animation: robo1 1s steps(8) infinite;
+    -moz-animation: robo1 1s steps(8) infinite;
+    -ms-animation: robo1 1s steps(8) infinite;
+    -o-animation: robo1 1s steps(8) infinite;
+    animation: robo1 1s steps(8) infinite;
+}
+
+@-webkit-keyframes robo1 {
+   from { background-position:    0px; }
+     to { background-position: -1120px; }
+}
+
+@-moz-keyframes robo1 {
+   from { background-position:    0px; }
+     to { background-position: -1120px; }
+}
+
+@-ms-keyframes robo1 {
+   from { background-position:    0px; }
+     to { background-position: -1120px; }
+}
+
+@-o-keyframes robo1 {
+   from { background-position:    0px; }
+     to { background-position: -1120px; }
+}
+
+@keyframes robo1 {
+   from { background-position:    0px; }
+     to { background-position: -1120px; }
 }
 
 .red {
