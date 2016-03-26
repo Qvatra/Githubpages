@@ -15,7 +15,6 @@ body {
     padding-bottom: 5px;
     width: 100%;
     background: #e7e7e7 url(../images/body-bg.png) 0 0 repeat;
-
 }
 
 .myfooter hr,
@@ -157,6 +156,34 @@ h4, h5 {
 @keyframes robo1 {
    from { background-position:    0px; }
      to { background-position: -1120px; }
+}
+
+.navbar-brand {
+    margin: -3px 0 0 0;
+}
+
+.navbar-brand img {
+    width: 24px;
+    display: inline-block !important;
+}
+
+.navbar-brand span {
+    color: #2AAED4;
+    top: -4px;
+    font-size: 18px;
+    position: relative;
+}
+
+.navbar-nav {
+    padding-left: 0px; 
+}
+
+.navbar-nav>li {
+    padding-left: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    margin: 2px 0 -2px 0;
 }
 
 .red {
