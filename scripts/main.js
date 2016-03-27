@@ -1,8 +1,8 @@
 $(document).ready(function() {
     console.log('main: dom ready');
 
-    $('#container').css('display', 'none');
-    $('#container').fadeIn(900);
+    $('#content').css('display', 'none');
+    $('#content').fadeIn(900);
 
     $('#robo1').hover(function() {
         $('#robo1').addClass('robo1a');
