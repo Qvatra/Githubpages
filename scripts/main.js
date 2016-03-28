@@ -57,6 +57,15 @@ $(document).ready(function() {
         }
     });
 
-
+    $('.social').hover(function() {
+        $(this).animate({ borderSpacing: -360 }, {
+            step: function(now, fx) {
+                $(this).css('-webkit-transform', 'rotate(' + now + 'deg)');
+                $(this).css('-moz-transform', 'rotate(' + now + 'deg)');
+                $(this).css('transform', 'rotate(' + now + 'deg)');
+            },
+            duration: 300
+        }, 'linear');
+    }, function() {});
 
 });

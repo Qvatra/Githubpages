@@ -27,15 +27,15 @@ body {
     text-shadow: none;
 }
 
-.myfooter {
-    padding-bottom: 5px;
-    width: 100%;
+.footer {
+    padding: 10px; 
 }
 
-.myfooter hr,
-.myfooter-fixed hr {
-    margin: 0px;
-    padding: 5px;
+.footer span {
+    position: relative;
+    top: 8px;
+    margin: 5px;
+    color: whitesmoke
 }
 
 /*Typography*/
@@ -57,6 +57,76 @@ h4, h5 {
 
 .colorContainer h6 {
     text-align: justify; 
+}
+
+/*Social*/
+/*=============================================================================*/
+.social {
+    border-radius: 30px;
+    width: 36px;
+    height: 36px;
+    color: white;
+    background: black !important;
+    text-shadow: 1px 1px black;
+    box-shadow: 0 0 2px white;
+    cursor: pointer;
+}
+
+.social:hover {
+    color: #487BD4;
+}
+
+.youtube {
+    font-size: 26px !important;
+    background: #C91C20;
+    padding: 4px 0 0 6px;
+}
+
+.facebook {
+    position: relative;
+    top: 1px;
+    font-size: 26px !important;
+    background: #3B5998;
+    padding: 6px 0 0 9px;
+}
+
+.google {
+    position: relative;
+    top: -1px;
+    font-size: 21px !important;
+    background: #DB4437;
+    padding: 8px 0 0 5px;
+}
+
+.vk {
+    position: relative;
+    font-size: 24px !important;
+    background: #325B89;
+    padding: 6px 0 0 5px;
+}
+
+.twitter {
+    position: relative;
+    top: 2px;
+    font-size: 26px !important;
+    background: #2CA1CC;
+    padding: 6px 0 0 6px;
+}
+
+.chrome {
+    position: relative;
+    top: 1px;
+    font-size: 25px !important;
+    background: black;
+    padding: 6px 0 0 5px;
+}
+
+.steam {
+    position: relative;
+    top: 1px;
+    font-size: 26px !important;
+    background: black;
+    padding: 6px 0 0 5px;
 }
 
 /*Bootstrap*/
@@ -123,6 +193,10 @@ h4, h5 {
 .col-centered {
     float: none;
     margin: 0 auto;
+}
+
+.right {
+    float: right;
 }
 
 .red { background: red; }
