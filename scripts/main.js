@@ -66,6 +66,55 @@ $(document).ready(function() {
             },
             duration: 300
         }, 'linear');
-    }, function() {});
+    }, function() { });
+
+    scrollActivation($('.footer'), window.innerHeight, 200, function(el) {
+        scaleAnimation(el, 1.1, 200, 'linear', function() {
+            scaleAnimation(el, 1, 200, 'linear');
+        });
+    });
 
 });
+
+
+
+
+// activates callback for the given element if downscroll reaches 'activationHeight + element.position'
+function scrollActivation(element, activationHeight, deactivationHeight, callback) {
+    $(document).ready(function() {
+        var lastScrollTop = 0;
+        var allowActivation = true;
+        $(window).scroll(function(evt) {
+            var scrollTop = $(this).scrollTop();
+            if (scrollTop > lastScrollTop) { // downscroll
+                if (scrollTop + activationHeight >= element.offset().top && allowActivation) {
+                    console.log('activate');
+                    allowActivation = false;
+                    callback(element);
+                }
+            } else { // upscroll
+                if (!allowActivation && scrollTop + activationHeight + deactivationHeight < element.offset().top) {
+                    console.log('allow activation');
+                    allowActivation = true;
+                }
+            }
+            lastScrollTop = scrollTop;
+        });
+    });
+}
+
+function scaleAnimation(element, scale, duration, easing, callback) {
+    $(document).ready(function() {
+        element.animate({ scale: scale }, {
+            step: function(now, fx) {
+                $(this).css('-webkit-transform', 'scale(' + now + ')');
+                $(this).css('-moz-transform', 'scale(' + now + ')');
+                $(this).css('transform', 'scale(' + now + ')');
+            },
+            duration: duration ? duration : 200,
+            complete: function() {
+                if (callback && typeof callback() === "function") callback();
+            }
+        }, easing ? easing : 'linear');
+    });
+}
