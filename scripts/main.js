@@ -69,7 +69,7 @@ $(document).ready(function() {
     }, function() { });
 
     scrollActivation($('.footer'), window.innerHeight, 200, function(el) {
-        scaleAnimation(el, 1.1, 200, 'linear', function() {
+        scaleAnimation(el, 1.05, 200, 'linear', function() {
             scaleAnimation(el, 1, 200, 'linear');
         });
     });
@@ -88,13 +88,13 @@ function scrollActivation(element, activationHeight, deactivationHeight, callbac
             var scrollTop = $(this).scrollTop();
             if (scrollTop > lastScrollTop) { // downscroll
                 if (scrollTop + activationHeight >= element.offset().top && allowActivation) {
-                    console.log('activate');
+                    //console.log('activate');
                     allowActivation = false;
                     callback(element);
                 }
             } else { // upscroll
                 if (!allowActivation && scrollTop + activationHeight + deactivationHeight < element.offset().top) {
-                    console.log('allow activation');
+                    //console.log('allow activation');
                     allowActivation = true;
                 }
             }

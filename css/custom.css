@@ -59,6 +59,24 @@ h4, h5 {
     text-align: justify; 
 }
 
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: #d5000d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c5000c;
+  text-decoration: none; /*issue for socials*/
+}
+
 /*Social*/
 /*=============================================================================*/
 .social {
