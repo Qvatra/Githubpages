@@ -17,11 +17,11 @@ $(document).ready(function() {
     });
 
     $('#storeBtn').hover(function() {
-        $('#storeBtn').addClass('scaleup');
-        $('#storeBtn').removeClass('scaledown');
+        scaleAnimation($('#storeBtn'), 0.08, 200, function() {
+            scaleAnimation($('#storeBtn'), 0.04, 250);
+        });
     }, function() {
-        $('#storeBtn').addClass('scaledown');
-        $('#storeBtn').removeClass('scaleup');
+        scaleAnimation($('#storeBtn'), 0, 250);
     });
 
     $('#anatomy1').click(function() {
@@ -72,8 +72,8 @@ $(document).ready(function() {
     }, function() { });
 
     scrollActivation($('.footer'), window.innerHeight, 200, function(el) {
-        scaleAnimation(el, 1.05, 200, 'linear', function() {
-            scaleAnimation(el, 1, 200, 'linear');
+        scaleAnimation(el, 0.05, 200, function() {
+            scaleAnimation(el, 0, 200);
         });
     });
 
@@ -106,18 +106,19 @@ function scrollActivation(element, activationHeight, deactivationHeight, callbac
     });
 }
 
-function scaleAnimation(element, scale, duration, easing, callback) {
+function scaleAnimation(element, scale, duration, callback) {
     $(document).ready(function() {
         element.animate({ scale: scale }, {
             step: function(now, fx) {
-                $(this).css('-webkit-transform', 'scale(' + now + ')');
-                $(this).css('-moz-transform', 'scale(' + now + ')');
-                $(this).css('transform', 'scale(' + now + ')');
+                $(this).css('-webkit-transform', 'scale(' + (1 + now) + ')');
+                $(this).css('-moz-transform', 'scale(' + (1 + now) + ')');
+                $(this).css('transform', 'scale(' + (1 + now) + ')');
             },
             duration: duration ? duration : 200,
+            easing: 'swing',
             complete: function() {
                 if (callback && typeof callback() === "function") callback();
             }
-        }, easing ? easing : 'linear');
+        });
     });
 }
