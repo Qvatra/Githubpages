@@ -3,7 +3,7 @@
 
 body {
   padding-top: 50px;
-   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 1em;
   line-height: 1.5;
@@ -285,11 +285,12 @@ ul li {
 /*=============================================================================*/
 .carousel-control { 
     width: 8%;
+    width: 0px;
 }
 .carousel-control.left,
 .carousel-control.right { 
-    margin-left: 15px;
-    margin-right: 15px; 
+    margin-right: 40px;
+    margin-left: 32px; 
     background-image: none;
     opacity: 1;
 }
@@ -316,12 +317,41 @@ ul li {
 .carousel-col { 
     position: relative; 
     min-height: 1px; 
-    padding-right: 10px; 
-    padding-left: 10px; 
-    float: left; 
+    padding: 5px; 
+    float: left;
+    cursor: pointer;
  }
+ /*.carousel-col div,
+ .carousel-col img {
+     background: silver;
+     width: 100%;
+     height: 100%;
+ }*/
  .active > div { display:none; }
  .active > div:first-child { display:block; }
+
+/*Modal*/
+/*=============================================================================*/
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 1;
+    font-size: 32px;
+    color: red;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.close-modal:hover {
+    top: 9px;
+    right: 14px;
+    font-size: 35px;
+}
+.close-modal:active {
+    top: 10px;
+    right: 15px;
+    font-size: 32px;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+}
 
 /*Media Queries*/
 /*=============================================================================*/

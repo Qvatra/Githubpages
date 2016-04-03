@@ -4,16 +4,16 @@ $(document).ready(function() {
     $('#content').css('display', 'none');
     $('#content').fadeIn(900);
 
-    $('#robo1').hover(function() {
-        $('#robo1').addClass('robo1a');
+    $('.robo1').hover(function() {
+        $(this).addClass('robo1a');
     }, function() {
-        $('#robo1').removeClass('robo1a');
+        $(this).removeClass('robo1a');
     });
 
-    $('#anatomy1').hover(function() {
-        scaleAnimation($('#anatomy1'), 0.03, 200);
+    $('.anatomy1').hover(function() {
+        scaleAnimation($(this), 0.03, 200);
     }, function() {
-        scaleAnimation($('#anatomy1'), 0, 250);
+        scaleAnimation($(this), 0, 250);
     });
 
     $('#storeBtn').hover(function() {
@@ -24,7 +24,7 @@ $(document).ready(function() {
         scaleAnimation($('#storeBtn'), 0, 300);
     });
 
-    $('#anatomy1').click(function() {
+    $('.anatomy1').click(function() {
         var name = 'anatomy1a';
         var obj = this.classList;
         var classArr = [];
@@ -36,9 +36,9 @@ $(document).ready(function() {
         }
 
         if (classArr.indexOf(name) > -1) {
-            $('#anatomy1').removeClass(name);
+            $(this).removeClass(name);
         } else {
-            $('#anatomy1').addClass(name);
+            $(this).addClass(name);
         }
     });
 
@@ -73,6 +73,13 @@ $(document).ready(function() {
             scaleAnimation(el, 0, 200);
         });
     });
+
+
+    $('.carousel-col img, .carousel-col div').click(function() {
+        $('#myModal .modal-dialog .modal-content .modal-body').html($(this).clone());
+        $('#myModal').modal('show');
+    });
+
 
 });
 
