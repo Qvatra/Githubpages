@@ -239,6 +239,7 @@ ul li {
 /*Animations*/
 /*=============================================================================*/
 .anatomy1 {
+    cursor: pointer;
     border: 1px solid lightgrey;
     float: right;
     width: 250px;
@@ -249,18 +250,10 @@ ul li {
     transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
 }
 
-.anatomy1b {
-    /*width: 254px;
-    margin:-2px -2px 8px 13px;*/
-    -ms-transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    transform: scale(1.02);
-}
-
 .anatomy1a {
-    -ms-transform: scale(1.0);
-    -webkit-transform: scale(1.0);
-    transform: scale(1.0);
+    -ms-transform: scale(1.0) !important;
+    -webkit-transform: scale(1.0) !important;
+    transform: scale(1.0) !important;
     width: 100%;
     margin: 0 0 10px 0;
 }

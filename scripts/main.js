@@ -11,9 +11,9 @@ $(document).ready(function() {
     });
 
     $('#anatomy1').hover(function() {
-        $('#anatomy1').addClass('anatomy1b');
+        scaleAnimation($('#anatomy1'), 0.03, 200);
     }, function() {
-        $('#anatomy1').removeClass('anatomy1b');
+        scaleAnimation($('#anatomy1'), 0, 250);
     });
 
     $('#storeBtn').hover(function() {
@@ -21,7 +21,7 @@ $(document).ready(function() {
             scaleAnimation($('#storeBtn'), 0.04, 250);
         });
     }, function() {
-        scaleAnimation($('#storeBtn'), 0, 250);
+        scaleAnimation($('#storeBtn'), 0, 300);
     });
 
     $('#anatomy1').click(function() {
@@ -42,7 +42,6 @@ $(document).ready(function() {
         }
     });
 
-
     $('.carousel[data-type="multi"] .item').each(function() {
         var next = $(this).next();
         if (!next.length) {
@@ -61,15 +60,13 @@ $(document).ready(function() {
     });
 
     $('.social').hover(function() {
-        $(this).animate({ borderSpacing: -360 }, {
-            step: function(now, fx) {
-                $(this).css('-webkit-transform', 'rotate(' + now + 'deg)');
-                $(this).css('-moz-transform', 'rotate(' + now + 'deg)');
-                $(this).css('transform', 'rotate(' + now + 'deg)');
-            },
-            duration: 300
-        }, 'linear');
-    }, function() { });
+        var el = $(this);
+        rotateAnimation(el, 0, -400, 300, function() { 
+            rotateAnimation(el, -400, 40, 200);
+        });
+    }, function() {
+        rotateAnimation($(this), 0, 360, 300);
+    });
 
     scrollActivation($('.footer'), window.innerHeight, 200, function(el) {
         scaleAnimation(el, 0.05, 200, function() {
@@ -108,17 +105,39 @@ function scrollActivation(element, activationHeight, deactivationHeight, callbac
 
 function scaleAnimation(element, scale, duration, callback) {
     $(document).ready(function() {
-        element.animate({ scale: scale }, {
-            step: function(now, fx) {
-                $(this).css('-webkit-transform', 'scale(' + (1 + now) + ')');
-                $(this).css('-moz-transform', 'scale(' + (1 + now) + ')');
-                $(this).css('transform', 'scale(' + (1 + now) + ')');
-            },
-            duration: duration ? duration : 200,
-            easing: 'swing',
-            complete: function() {
-                if (callback && typeof callback() === "function") callback();
-            }
-        });
+        if (!element.is(':animated')) {
+            element.animate({ scale: scale }, {
+                step: function(now, fx) {
+                    $(this).css('-webkit-transform', 'scale(' + (1 + now) + ')');
+                    $(this).css('-moz-transform', 'scale(' + (1 + now) + ')');
+                    $(this).css('transform', 'scale(' + (1 + now) + ')');
+                },
+                duration: duration ? duration : 200,
+                easing: 'swing',
+                complete: function() {
+                    if (callback && typeof callback() === "function") callback();
+                }
+            });
+        }
+    });
+}
+
+function rotateAnimation(element, startAngle, angle, duration, callback) {
+    $(document).ready(function() {
+        if (!element.is(':animated')) {
+            element.animate({ borderSpacing: angle }, {
+                step: function(now, fx) {
+                    $(this).css('-webkit-transform', 'rotate(' + (startAngle + now) + 'deg)');
+                    $(this).css('-moz-transform', 'rotate(' + (startAngle + now) + 'deg)');
+                    $(this).css('transform', 'rotate(' + (startAngle + now) + 'deg)');
+                },
+                duration: duration ? duration : 200,
+                easing: 'swing',
+                complete: function() {
+                    element.css({ borderSpacing: 0 });
+                    if (callback && typeof callback() === "function") callback();
+                }
+            });
+        }
     });
 }
