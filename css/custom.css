@@ -329,6 +329,7 @@ ul li {
 @media (min-width: 100px) and (max-width: 479px) {
     .header {padding-top: 10px; padding-bottom: 10px;}
     .carousel-inner .active.left { left: -100%; }
+    .carousel-inner .active.right { left: 100%; }
 	.carousel-inner .next        { left:  100%; }
 	.carousel-inner .prev		 { left: -100%; }
     .carousel-col                { width: 100%; }
@@ -338,6 +339,7 @@ ul li {
 @media (min-width: 480px) and (max-width: 767px) {
     .header {padding-top: 10px; padding-bottom: 10px;}
     .carousel-inner .active.left { left: -50%; }
+    .carousel-inner .active.right { left: 50%; }
 	.carousel-inner .next        { left:  50%; }
 	.carousel-inner .prev		 { left: -50%; }
     .carousel-col                { width: 50%; }
@@ -347,6 +349,7 @@ ul li {
 /*sm*/
 @media (min-width: 768px) and (max-width: 991px) {
     .carousel-inner .active.left { left: -50%; }
+    .carousel-inner .active.right { left: 50%; }
 	.carousel-inner .next        { left:  50%; }
 	.carousel-inner .prev		 { left: -50%; }
     .carousel-col                { width: 50%; }
@@ -356,6 +359,7 @@ ul li {
 /*md*/
 @media (min-width: 992px) and (max-width: 1199px) {
     .carousel-inner .active.left { left: -33%; }
+    .carousel-inner .active.right { left: 33%; }
 	.carousel-inner .next        { left:  33%; }
 	.carousel-inner .prev		 { left: -33%; }
     .carousel-col                { width: 33%; }
@@ -366,6 +370,7 @@ ul li {
 /*lg*/
 @media (min-width: 1200px) {
     .carousel-inner .active.left { left: -33%; }
+    .carousel-inner .active.right { left: 33%; }
 	.carousel-inner .next        { left:  33%; }
 	.carousel-inner .prev		 { left: -33%; }
     .carousel-col                { width: 33%; }
