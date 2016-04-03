@@ -77,6 +77,12 @@ a:hover {
   text-decoration: none; /*issue for socials*/
 }
 
+ul li {
+  list-style-position: inside;
+  list-style: disc;
+  margin-left: 20px;
+}
+
 /*Social*/
 /*=============================================================================*/
 .social {

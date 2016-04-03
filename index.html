@@ -62,7 +62,7 @@
                 <h5>
                     In 2D game graphics, a <strong>sprite</strong> is an animation that is integrated into a game background.
                     2D sprite animation is presented as a sequence of static key-frames and called a sprite sheet.
-                    Sprite sheet usually contains all possible animations for a given character (or even for a game scene).
+                    Sprite sheet can contain multiple animations for a given character (or even for a game scene).
                     During runtime engine of a game uses a sprite sheet to select neened key-frames for a current animation.
                     The easiest way to make an animation and a sprite sheet is to use an animator.
                 </h5>
@@ -72,7 +72,7 @@
                 <img id="anatomy1" class="anatomy1" src="images/girl760.jpg" alt="image of Anatomy animator" title="Anatomy sprite animator software">
                 <h5>
                     Anatomy animator was developed to create 2D animated sprites and sprite sheets quickly and easily.
-                    Animator represents sprite animation model as a skeleton that consist of adjustable bones.
+                    Animator represents animation model as a skeleton that consists of adjustable bones.
                     Each bone represent movable part of a model and requires a texture. 
                     Each frame of an animation corresponds to a specific set of bone's coordinates.
                     This structure allows you to modify animation in a very efficient way.
@@ -135,6 +135,50 @@
                         target="_blank" title="Anatomy Sprite Animator in Chrome web store">Get Anatomy Sprite Animator</a>
                     </div>
                 </div>
+                <br />
+
+                <h3>How to create animation with the Anatomy</h3>
+                <h4>Textures. Draw, cut or compose.</h4>
+                <h5>
+                    Every animation needs textures for all movable parts of a model.
+                    Textures could be drawn as a vector or as a raster graphics.
+                    Vector texture usually has less details but is infinitely scalable without losing image quality.
+                    This is important when you don't know the exact size for your animation.
+                    The most imortant is that vector files are not "flattened".
+                    All shapes of a vector image exist separately on different layers which makes it very easy to edit or paint.
+                    This could be very useful in the case when you want to create a similar character. (animation of soldier and medic)
+                    
+                    Another approach is to cut textures from an existing picture. (animated bikini girl)
+                    
+                    And finally you can find all the textures separately.
+                    As an example "dancing girl" animation was composed from free vector images with minimum editing. (dancing girl)
+                </h5>
+                <h5>
+                    Tips:<br />
+                    Use vectors as it can be easily edited and reused for similar character.  
+                    Textures should have some margins from a joint side to avoid gaps in joints after bending.
+                </h5>
+                <br />
+                <h4>Let's animate an action.</h4>
+                <h5>
+                    Action is a small basic animation part (jump, sit, fire, etc).
+                    Create all body parts in animator by attaching textures to bones of a skeleton.
+                    Drag, scale and rotate bones to compose the first frame.
+                    Add the second frame and compose final state of your action.
+                    Now add another frame in between and apply transition effect which will set average coordinates for all bones in the middle frame.
+                    Depending on your animation the middle frame can require additional editing.
+                    Anatomy animator allows to edit frames intuitively.
+                    Preview panel plays an animation in a loop while you change selected frame on the edit panel.
+                    As a result you can always see which tweaks make your animation look better.
+                    In a similar way you can add as many frames as you want.
+                </h5>
+                <br />
+                <h4>Produce a sprite sheet.</h4>
+                <h5>
+                    Animated model could contain several actions.
+                    All of the actions could be exported in one sprite sheet image or as a sequence of frame images.
+                    This output is fully compatible with all modern game engines like Unity, Construct, Cocos, etc.
+                </h5>
                 <br />
 
                 <h3 class="text-center">Gallery</h3>
