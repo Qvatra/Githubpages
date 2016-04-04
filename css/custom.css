@@ -331,6 +331,53 @@ ul li {
 @-o-keyframes robo1 { from { background-position: 0px; } to { background-position: -1120px; }}
 @keyframes robo1 { from { background-position: 0px; } to { background-position: -1120px; }}
 
+.soldier-medic {
+    margin: 0 0 0 15px;
+    float: right;
+}
+
+.soldier {
+    margin-bottom: 15px;
+    width: 140px;
+    height: 70px;
+    background-image: url("../images/soldier.png");
+}
+
+.soldiera {
+    background-image: url("../images/soldier.png");
+    -webkit-animation: soldier 4s steps(30) infinite;
+    -moz-animation: soldier 4s steps(30) infinite;
+    -ms-animation: soldier 4s steps(30) infinite;
+    -o-animation: soldier 4s steps(30) infinite;
+    animation: soldier 4s steps(30) infinite;
+}
+
+@-webkit-keyframes soldier { from { background-position: 0px; } to { background-position: -4200px; }}
+@-moz-keyframes soldier { from { background-position: 0px; } to { background-position: -4200px; }}
+@-ms-keyframes soldier { from { background-position: 0px; } to { background-position: -4200px; }}
+@-o-keyframes soldier { from { background-position: 0px; } to { background-position: -4200px; }}
+@keyframes soldier { from { background-position: 0px; } to { background-position: -4200px; }}
+
+.medic {
+    width: 140px;
+    height: 78px;
+    background-image: url("../images/medic.png");
+}
+
+.medica {
+    background-image: url("../images/medic.png");
+    -webkit-animation: medic 3.5s steps(27) infinite;
+    -moz-animation: medic 3.5s steps(27) infinite;
+    -ms-animation: medic 3.5s steps(27) infinite;
+    -o-animation: medic 3.5s steps(27) infinite;
+    animation: medic 3.5s steps(27) infinite;
+}
+
+@-webkit-keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
+@-moz-keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
+@-ms-keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
+@-o-keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
+@keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
 /*Carousel*/
 /*=============================================================================*/
 .carousel-control { 

@@ -10,6 +10,18 @@ $(document).ready(function() {
         $(this).removeClass('robo1a');
     });
 
+    $('.soldier').hover(function() {
+        $(this).addClass('soldiera');
+    }, function() {
+        $(this).removeClass('soldiera');
+    });
+
+    $('.medic').hover(function() {
+        $(this).addClass('medica');
+    }, function() {
+        $(this).removeClass('medica');
+    });     
+
     $('.anatomy1').hover(function() {
         scaleAnimation($(this), 0.03, 200);
     }, function() {
