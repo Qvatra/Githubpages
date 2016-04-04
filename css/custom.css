@@ -288,6 +288,11 @@ ul li {
 
 /*Animations*/
 /*=============================================================================*/
+body:after{ /*preload sprite images to avoid blinking*/
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content: url("../images/robo1.png") url("../images/soldier.png") url("../images/medic.png");
+}
+
 .anatomy1 {
     cursor: pointer;
     border: 1px solid lightgrey;
@@ -313,7 +318,7 @@ ul li {
     float: left;
     width: 140px;
     height: 200px;
-    background-image: url("../images/robo1.png");
+    background-image: url("../images/robo1st.png");
 }
 
 .robo1a {
@@ -334,13 +339,17 @@ ul li {
 .soldier-medic {
     margin: 0 0 0 15px;
     float: right;
+    background: -webkit-radial-gradient(#D0D0D0, #e7e7e7, #e7e7e7); /* Safari 5.1-6.0 */
+    background: -o-radial-gradient(#D0D0D0, #e7e7e7, #e7e7e7); /* For Opera 11.6-12.0 */
+    background: -moz-radial-gradient(#D0D0D0, #e7e7e7, #e7e7e7); /* For Firefox 3.6-15 */
+    background: radial-gradient(#D0D0D0, #e7e7e7, #e7e7e7); /* Standard syntax */
 }
 
 .soldier {
     margin-bottom: 15px;
     width: 140px;
     height: 70px;
-    background-image: url("../images/soldier.png");
+    background-image: url("../images/soldier1st.png");
 }
 
 .soldiera {
@@ -361,7 +370,7 @@ ul li {
 .medic {
     width: 140px;
     height: 78px;
-    background-image: url("../images/medic.png");
+    background-image: url("../images/medic1st.png");
 }
 
 .medica {
