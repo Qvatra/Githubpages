@@ -293,6 +293,19 @@ body:after{ /*preload sprite images to avoid blinking*/
     content: url("../images/robo1.png") url("../images/soldier.png") url("../images/medic.png") url("../images/girlw.png") url("../images/girld.png");
 }
 
+.play {
+    opacity: 0.3;
+    font-size: 15px;
+}
+
+.robo1a .play,
+.girlwa .play,
+.girlda .play,
+.soldiera .play,
+.medica .play {
+    display: none;
+}
+
 .anatomy1 {
     cursor: pointer;
     border: 1px solid lightgrey;
