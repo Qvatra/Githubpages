@@ -290,7 +290,7 @@ ul li {
 /*=============================================================================*/
 body:after{ /*preload sprite images to avoid blinking*/
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-    content: url("../images/robo1.png") url("../images/soldier.png") url("../images/medic.png");
+    content: url("../images/robo1.png") url("../images/soldier.png") url("../images/medic.png") url("../images/girlw.png") url("../images/girld.png");
 }
 
 .anatomy1 {
@@ -387,6 +387,48 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-ms-keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
 @-o-keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
 @keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
+
+.girlw {
+    width: 87px;
+    height: 160px;
+    background-image: url("../images/girlw1st.png");
+}
+
+.girlwa {
+    background-image: url("../images/girlw.png");
+    -webkit-animation: girlw 1s steps(8) infinite;
+    -moz-animation: girlw 1s steps(8) infinite;
+    -ms-animation: girlw 1s steps(8) infinite;
+    -o-animation: girlw 1s steps(8) infinite;
+    animation: girlw 1s steps(8) infinite;
+}
+
+@-webkit-keyframes girlw { from { background-position: 0px; } to { background-position: -696px; }}
+@-moz-keyframes girlw { from { background-position: 0px; } to { background-position: -696px; }}
+@-ms-keyframes girlw { from { background-position: 0px; } to { background-position: -696px; }}
+@-o-keyframes girlw { from { background-position: 0px; } to { background-position: -696px; }}
+@keyframes girlw { from { background-position: 0px; } to { background-position: -696px; }}
+
+.girld {
+    width: 193px;
+    height: 168px;
+    background-image: url("../images/girld1st.png");
+}
+
+.girlda {
+    background-image: url("../images/girld.png");
+    -webkit-animation: girld 2.5s steps(35) infinite;
+    -moz-animation: girld 2.5s steps(35) infinite;
+    -ms-animation: girld 2.5s steps(35) infinite;
+    -o-animation: girld 2.5s steps(35) infinite;
+    animation: girld 2.5s steps(35) infinite;
+}
+
+@-webkit-keyframes girld { from { background-position: 0px; } to { background-position: -6755px; }}
+@-moz-keyframes girld { from { background-position: 0px; } to { background-position: -6755px; }}
+@-ms-keyframes girld { from { background-position: 0px; } to { background-position: -6755px; }}
+@-o-keyframes girld { from { background-position: 0px; } to { background-position: -6755px; }}
+@keyframes girld { from { background-position: 0px; } to { background-position: -6755px; }}
 /*Carousel*/
 /*=============================================================================*/
 .carousel-control { 

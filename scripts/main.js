@@ -4,23 +4,7 @@ $(document).ready(function() {
     $('#content').css('display', 'none');
     $('#content').fadeIn(900);
 
-    $('.robo1').hover(function() {
-        $(this).addClass('robo1a');
-    }, function() {
-        $(this).removeClass('robo1a');
-    });
-
-    $('.soldier').hover(function() {
-        $(this).addClass('soldiera');
-    }, function() {
-        $(this).removeClass('soldiera');
-    });
-
-    $('.medic').hover(function() {
-        $(this).addClass('medica');
-    }, function() {
-        $(this).removeClass('medica');
-    });     
+    animateAll(['robo1','soldier','medic','girlw','girld']);
 
     $('.anatomy1').hover(function() {
         scaleAnimation($(this), 0.03, 200);
@@ -95,7 +79,19 @@ $(document).ready(function() {
 });
 
 
+function animateAll(array) {
+    array.forEach(function(name, idx) {
+        animateOnHover(name, name + 'a');
+    });
+}
 
+function animateOnHover(staticClass, animatedClass) {
+    $('.' + staticClass).hover(function() {
+        $(this).addClass(animatedClass);
+    }, function() {
+        $(this).removeClass(animatedClass);
+    });
+}
 
 // activates callback for the given element if downscroll reaches 'activationHeight + element.position'
 function scrollActivation(element, activationHeight, deactivationHeight, callback) {
