@@ -349,6 +349,12 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-o-keyframes robo1 { from { background-position: 0px; } to { background-position: -1120px; }}
 @keyframes robo1 { from { background-position: 0px; } to { background-position: -1120px; }}
 
+.soldier-textures {
+    float: right;
+    height: 160px;
+    margin: -5px 5px 0 15px;
+}
+
 .soldier-medic {
     margin: 0 0 0 15px;
     float: right;
@@ -401,7 +407,14 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-o-keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
 @keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
 
+.girlw-textures {
+    float: right;
+    height: 160px;
+    margin: 0 15px 0 15px;
+}
+
 .girlw {
+    float: right;
     width: 87px;
     height: 160px;
     background-image: url("../images/girlw1st.png");
