@@ -351,7 +351,6 @@ body:after{ /*preload sprite images to avoid blinking*/
 
 .soldier-textures {
     float: right;
-    height: 160px;
     margin: -5px 5px 0 15px;
 }
 
@@ -409,7 +408,6 @@ body:after{ /*preload sprite images to avoid blinking*/
 
 .girlw-textures {
     float: right;
-    height: 160px;
     margin: 0 15px 0 15px;
 }
 
@@ -435,7 +433,21 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-o-keyframes girlw { from { background-position: 0px; } to { background-position: -696px; }}
 @keyframes girlw { from { background-position: 0px; } to { background-position: -696px; }}
 
+.girld-textures {
+    float: right;
+    margin: 10px -50px 0 15px;
+}
+
+.girld-play {
+    position: relative;
+    left: 80px;
+    top: 10px;
+}
+
 .girld {
+    position: relative;
+    right: -25px;
+    float: right;
     width: 193px;
     height: 168px;
     background-image: url("../images/girld1st.png");
