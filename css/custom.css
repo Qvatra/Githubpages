@@ -250,6 +250,10 @@ ul li {
     margin-top: 10px; 
 }
 
+.no-margin {
+    margin: 0;
+}
+
 .nav-link {
     margin: 15px 10px 11px 10px;
     color: #9d9d9d;
@@ -349,6 +353,10 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-o-keyframes robo1 { from { background-position: 0px; } to { background-position: -1120px; }}
 @keyframes robo1 { from { background-position: 0px; } to { background-position: -1120px; }}
 
+.soldiers-caption {
+    margin: 0 0 0 20px;
+}
+
 .soldier-textures {
     float: right;
     margin: -5px 5px 0 15px;
@@ -405,6 +413,10 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-ms-keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
 @-o-keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
 @keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
+
+.girlw-caption {
+    margin: 5px 0 0 14px;
+}
 
 .girlw-textures {
     float: right;

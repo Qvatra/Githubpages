@@ -45,14 +45,14 @@ $(document).ready(function() {
         }
         next.children(':first-child').clone().appendTo($(this));
 
-        for (var i = 0; i < 1; i++) {
+        //for (var i = 0; i < 1; i++) { // here 1 for max 3 items, 2 for 4, 3 for 5...
             next = next.next();
             if (!next.length) {
                 next = $(this).siblings(':first');
             }
 
             next.children(':first-child').clone().appendTo($(this));
-        }
+        //}
     });
 
     $('.social').hover(function() {
