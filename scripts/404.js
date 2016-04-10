@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    if (location.pathname.indexOf('index.php') > -1) {
+    if (location.pathname.indexOf('software') > -1) {
         redirect();
     } else {
         setInterval(function() {
