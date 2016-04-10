@@ -119,13 +119,15 @@ em {
 
 a {
   color: #d5000d;
-  text-decoration: none;
-  
+  text-decoration: underline;
 }
 
 a:hover {
-  color: #c5000c;
-  /*text-decoration: none; issue for socials*/
+  color: #AD0000;
+}
+
+a:focus {
+  color: #AD0000;
 }
 
 ul li {
@@ -234,11 +236,31 @@ ul li {
 }
 
 .navbar-nav>li {
-    padding-left: 0;
+    top: 15px;
+    left: 15px;
+    color: #9d9d9d;
 }
 
-.navbar-default .navbar-nav>li>a {
-    margin: 2px 0 -2px 0;
+.navbar-nav>li:focus {
+    color: #9d9d9d !important;
+}
+
+.navbar-nav>li:hover {
+    color: white !important;
+}
+
+.navbar-nav>li>a {
+    margin-top: -12px;
+    text-decoration: none;
+    color: #9d9d9d !important;
+}
+
+.navbar-nav>li>a:focus {
+    color: #9d9d9d !important;
+}
+
+.navbar-nav>li>a:hover {
+    color: white !important;
 }
 
 /*Helpers*/
@@ -255,21 +277,23 @@ ul li {
     margin: 0;
 }
 
+.no-decoration {
+    text-decoration: none;
+}
+
 .no-decoration:hover {
     text-decoration: none;
 }
 
-.nav-link {
-    margin: 15px 10px 11px 10px;
-    color: #9d9d9d;
-}
-
-.nav-link:hover {
-    color: whitesmoke;
+.no-decoration:focus {
+    text-decoration: none;
 }
 
 .pseudolink {
     cursor: pointer;
+}
+
+.no-select {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none;   /* Chrome/Safari/Opera */
     -khtml-user-select: none;    /* Konqueror */
@@ -300,6 +324,14 @@ ul li {
 body:after{ /*preload sprite images to avoid blinking*/
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
     content: url("../images/robo1.png") url("../images/soldier.png") url("../images/medic.png") url("../images/girlw.png") url("../images/girld.png");
+}
+
+.soldiers-caption {
+    margin: 0 0 10px 20px;
+}
+
+.girls-caption {
+    margin: 5px 0 5px 20px;
 }
 
 .play {
@@ -358,10 +390,6 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-o-keyframes robo1 { from { background-position: 0px; } to { background-position: -1120px; }}
 @keyframes robo1 { from { background-position: 0px; } to { background-position: -1120px; }}
 
-.soldiers-caption {
-    margin: 0 0 0 20px;
-}
-
 .soldier-textures {
     float: right;
     margin: -5px 5px 0 15px;
@@ -418,10 +446,6 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-ms-keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
 @-o-keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
 @keyframes medic { from { background-position: 0px; } to { background-position: -3780px; }}
-
-.girlw-caption {
-    margin: 5px 0 0 14px;
-}
 
 .girlw-textures {
     float: right;
