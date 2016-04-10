@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script src="scripts/redirect.js"></script>
+
 <head>
-    <noscript>
-  <meta http-equiv="refresh" content="0;URL='http://spritetools.com/'">
-</noscript>
 </head>
 
 <body>
-
-
-<script>
-    
-    console.log('ddddddd');
-    debugger;
-</script>
-
 </body>
+
 </html>
