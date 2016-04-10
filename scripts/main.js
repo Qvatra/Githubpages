@@ -1,9 +1,4 @@
 $(document).ready(function() {
-    console.log('main: dom ready');
-
-    $('#content').css('display', 'none');
-    $('#content').fadeIn(900);
-
     animateAll(['robo1','soldier','medic','girlw','girld']);
 
     $('.anatomy1').hover(function() {

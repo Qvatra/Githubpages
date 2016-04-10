@@ -36,6 +36,12 @@ body {
     padding: 10px; 
 }
 
+.sticky-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .footer span {
     position: relative;
     top: 8px;
@@ -237,7 +243,7 @@ ul li {
 
 .navbar-nav>li {
     top: 15px;
-    left: 15px;
+    /*left: 33px;*/
     color: #9d9d9d;
 }
 
@@ -289,8 +295,9 @@ ul li {
     text-decoration: none;
 }
 
-.pseudolink {
+.pseudo-nav-link {
     cursor: pointer;
+    margin: 1px 15px 0 35px;
 }
 
 .no-select {
