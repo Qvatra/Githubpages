@@ -10,5 +10,5 @@ $(document).ready(function() {
 });
 
 function redirect() {
-    location.href = 'index.html';
+    location.href = 'https://qvatra.github.io/Githubpages/index.html';
 }
