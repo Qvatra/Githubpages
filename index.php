@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+echo '<script type="text/javascript">
+           window.location = "http://www.google.com/"
+      </script>';
 
 <script src="scripts/redirect.js"></script>
-
-<head>
-</head>
-
-<body>
-</body>
-
-</html>
