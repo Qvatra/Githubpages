@@ -16,11 +16,6 @@ body {
   background: linear-gradient(to right, #e7e7e7, white, #e7e7e7, #e7e7e7);    /* Standard syntax */
 }
 
-#content {
-  min-height: 595px;
-  background: transparent url(../images/highlight-bg.jpg) 50% 0 no-repeat;
-}
-
 .colorContainer {
     padding: 15px;
     background: cornflowerblue;

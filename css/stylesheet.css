@@ -10,7 +10,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+caption, tbody, tfoot, thead, tr,
 article, aside, canvas, details, embed,
 figure, figcaption, .header, hgroup,
 menu, nav, output, ruby, section, summary,
@@ -39,11 +39,6 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-spacing: 0;
-	border-collapse: collapse;
-}
-
 a.button {
   display: block;
   float: left;
@@ -126,22 +121,6 @@ ul, ol, dl {
 }
 
 /* COMMON STYLES */
-
-table {
-  width: 100%;
-  border: 1px solid #ebebeb;
-}
-
-th {
-  font-weight: 500;
-}
-
-td {
-  font-weight: 300;
-  text-align: center;
-  border: 1px solid #ebebeb;
-}
-
 p a {
   font-weight: 400;
 }
@@ -151,16 +130,6 @@ blockquote {
   margin-bottom: 20px;
   font-size: 1.6em;
   border-left: 10px solid #e9e9e9;
-}
-
-ol li {
-  list-style-position: inside;
-  list-style: decimal;
-  padding-left: 3px;
-}
-
-dl dt {
-  color: #303030;
 }
 
 /* MISC */
