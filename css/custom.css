@@ -331,7 +331,7 @@ pre code {
 
 .pseudo-nav-link {
     cursor: pointer;
-    margin: 1px 15px 0 35px;
+    margin: 0 15px 0 35px;
 }
 
 .no-select {
@@ -633,6 +633,37 @@ body:after{ /*preload sprite images to avoid blinking*/
 	.carousel-inner .next        { left:  100%; }
 	.carousel-inner .prev		 { left: -100%; }
     .carousel-col                { width: 100%; }
+    
+    /*redefining navbar collapse width*/
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: -10px 0 20px 0;
+    }
+    .navbar-nav>li {
+        float: none;
+        margin: 10px;
+    }
+    .navbar-nav>li>a {
+        padding: 0px!important;
+        margin: 0px!important;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+        overflow: hidden;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    } 
 }
 
 /*xs*/
@@ -645,6 +676,30 @@ body:after{ /*preload sprite images to avoid blinking*/
 	.carousel-inner .prev		 { left: -50%; }
     .carousel-col                { width: 50%; }
 	.active > div:first-child + div { display:block; }
+
+    /*redefining navbar collapse width*/
+    .navbar-header {
+        float: left; 
+    }
+    .navbar-toggle {
+        display: none; 
+    }
+    .navbar-collapse {
+        display: block !important; 
+    }
+    .navbar-nav {
+        float: left;
+        margin: -1px 0 0 0;
+    }
+    .navbar-nav>li {
+        float: left;
+    }
+    .navbar-nav>li>a {
+        padding-top: 15px;
+    }
+    .navbar-collapse.collapse.in { 
+        overflow: hidden;
+    }
 }
 
 /*sm*/
