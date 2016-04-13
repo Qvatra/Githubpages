@@ -24,7 +24,7 @@ body {
 }
 
 .colorContainer {
-    padding: 15px;
+    padding: 10px 30px 20px 25px;
     background: cornflowerblue;
     text-shadow: none;
 }
@@ -95,6 +95,7 @@ h5 {
 
 h6 {
   font-size: .8em;
+  margin-bottom: 10px;
 }
 
 p {
@@ -170,6 +171,21 @@ pre code {
   color: #f2f2f2;
   background-color: #303030;
   border: none;
+}
+
+.feature-icon {
+    font-size: 40px;
+    top: 15px;
+    color: white;
+    font-weight: normal;
+}
+
+.fa-code {
+    font-weight: bold;
+}
+
+.fa-globe {
+    font-size: 47px;
 }
 
 /*Social*/
@@ -315,6 +331,10 @@ pre code {
 
 .no-margin {
     margin: 0;
+}
+
+.no-padding {
+    padding: 0;
 }
 
 .no-decoration {
@@ -628,6 +648,8 @@ body:after{ /*preload sprite images to avoid blinking*/
     .header {padding-top: 10px; padding-bottom: 10px;}
     h1 {font-size: 30px}
     h2 {font-size: 22px}
+    .col-xxs-12 { width: 100%; }
+    .feature-icon { left: -5px;}
     .carousel-inner .active.left { left: -100%; }
     .carousel-inner .active.right { left: 100%; }
 	.carousel-inner .next        { left:  100%; }
@@ -670,6 +692,7 @@ body:after{ /*preload sprite images to avoid blinking*/
 @media (min-width: 480px) and (max-width: 767px) {
     .header {padding-top: 15px; padding-bottom: 15px;}
     h1 {font-size: 36px}
+    .feature-icon { left: -8px;}
     .carousel-inner .active.left { left: -50%; }
     .carousel-inner .active.right { left: 50%; }
 	.carousel-inner .next        { left:  50%; }
@@ -714,6 +737,7 @@ body:after{ /*preload sprite images to avoid blinking*/
 
 /*md*/
 @media (min-width: 992px) and (max-width: 1199px) {
+    .feature-icon { left: 10px;}
     .carousel-inner .active.left { left: -33%; }
     .carousel-inner .active.right { left: 33%; }
 	.carousel-inner .next        { left:  33%; }
@@ -725,6 +749,7 @@ body:after{ /*preload sprite images to avoid blinking*/
 
 /*lg*/
 @media (min-width: 1200px) {
+    .feature-icon { left: 20px;}
     .carousel-inner .active.left { left: -33%; }
     .carousel-inner .active.right { left: 33%; }
 	.carousel-inner .next        { left:  33%; }
