@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     $('.anatomy1').hover(function() {
         scaleAnimation($(this), 0.03, 200);
+        $(".anatomy1").removeAttr("title");
     }, function() {
         scaleAnimation($(this), 0, 250);
     });
@@ -14,6 +15,31 @@ $(document).ready(function() {
     }, function() {
         scaleAnimation($('#storeBtn'), 0, 300);
     });
+
+    //hovering textures  ----------------------  
+    $('.girld-textures').hover(function() {
+        $('.girld').addClass('girlda');
+        $(".girld-textures").removeAttr("title");
+    }, function() {
+        $('.girld').removeClass('girlda');
+    });
+
+    $('.girlw-textures').hover(function() {
+        $('.girlw').addClass('girlwa');
+        $(".girlw-textures").removeAttr("title");
+    }, function() {
+        $('.girlw').removeClass('girlwa');
+    });
+
+    $('.soldier-textures').hover(function() {
+        $('.soldier').addClass('soldiera');
+        $('.medic').addClass('medica');
+        $(".soldier-textures").removeAttr("title");
+    }, function() {
+        $('.soldier').removeClass('soldiera');
+        $('.medic').removeClass('medica');
+    });    
+    // ----------------------------------------
 
     $('.anatomy1').click(function() {
         var name = 'anatomy1a';
