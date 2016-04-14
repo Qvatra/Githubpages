@@ -1,5 +1,7 @@
 $(document).ready(function() {
     animateAll(['robo1','soldier','medic','girlw','girld']);
+    appearScaleAll(['fa-film', 'fa-cogs', 'glyphicon-time', 'fa-code', 'fa-globe'], 0.2);
+    appearScaleAll(['btn-success'], 0.08);
 
     $('.anatomy1').hover(function() {
         scaleAnimation($(this), 0.03, 200);
@@ -91,7 +93,6 @@ $(document).ready(function() {
         });
     });
 
-
     $('.carousel-col img, .carousel-col div').click(function() {
         $('#myModal .modal-dialog .modal-content .modal-body').html($(this).clone());
         $('#myModal').modal('show');
@@ -175,4 +176,50 @@ function rotateAnimation(element, startAngle, angle, duration, callback) {
             });
         }
     });
+}
+
+function appearScaleAll(array, maxScale) {
+    array.forEach(function(name, idx) {
+        appearActivation($('.' + name), function() {
+            scaleAnimation($('.' + name), maxScale, 200, function() {
+                scaleAnimation($('.' + name), 0, 200);
+            });
+        });
+    });
+}
+
+// calls callback when element scrolled into the viewport
+function appearActivation(element, callback) {
+    $(document).ready(function() {
+        var isVisible = true;
+        $(window).scroll(function(evt) {
+            if (!isVisible && elementInViewport(element[0])) {
+                callback(element);
+                isVisible = true;
+            }
+            if (isVisible && !elementInViewport(element[0])) {
+                isVisible = false;
+            }
+        });
+    });
+}
+
+function elementInViewport(el) {
+  var top = el.offsetTop;
+  var left = el.offsetLeft;
+  var width = el.offsetWidth;
+  var height = el.offsetHeight;
+
+  while(el.offsetParent) {
+    el = el.offsetParent;
+    top += el.offsetTop;
+    left += el.offsetLeft;
+  }
+
+  return (
+    top >= window.pageYOffset &&
+    left >= window.pageXOffset &&
+    (top + height) <= (window.pageYOffset + window.innerHeight) &&
+    (left + width) <= (window.pageXOffset + window.innerWidth)
+  );
 }
