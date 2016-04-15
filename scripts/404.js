@@ -10,5 +10,5 @@ $(document).ready(function() {
 });
 
 function redirect() {
-    location.href = 'https://qvatra.github.io/Githubpages/index.html';
+    location.href = 'https://spritetools.com/index.html';
 }
