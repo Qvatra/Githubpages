@@ -744,7 +744,7 @@ body:after{ /*preload sprite images to avoid blinking*/
 
 /*lg*/
 @media (min-width: 1200px) {
-    .feature-icon { left: 20px;}
+    .feature-icon { left: 10px;}
     .carousel-inner .active.left { left: -33%; }
     .carousel-inner .active.right { left: 33%; }
 	.carousel-inner .next        { left:  33%; }
