@@ -409,25 +409,29 @@ body:after{ /*preload sprite images to avoid blinking*/
     display: none;
 }
 
-.anatomy1 {
-    cursor: pointer;
-    border: 1px solid lightgrey;
+.software-img {
     float: right;
     width: 250px;
-    margin: 0 0 5px 15px;
-    -webkit-transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
-    -moz-transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
-    -o-transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
-    transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
+    margin: 0 0 0 15px;
 }
 
-.anatomy1a {
+.anatomy1 {
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid lightgrey;
+    /*-webkit-transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
+    -moz-transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
+    -o-transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;*/
+}
+
+/*.anatomy1a {
     -ms-transform: scale(1.0) !important;
     -webkit-transform: scale(1.0) !important;
     transform: scale(1.0) !important;
     width: 100%;
     margin: 0 0 10px 0;
-}
+}*/
 
 .robo1 {
     margin: 15px 15px 0 0;
@@ -609,6 +613,10 @@ body:after{ /*preload sprite images to avoid blinking*/
     padding: 5px; 
     float: left;
     cursor: pointer;
+ }
+ .carousel-col > img {
+    background: rgb(190, 224, 255);
+    padding: 5px;
  }
  .active > div { display:none; }
  .active > div:first-child { display:block; }

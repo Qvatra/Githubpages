@@ -4,11 +4,14 @@ $(document).ready(function() {
 
     appearScaleAll(['btn-success'], 0.08);
 
+    //hovering activates bouncing scale effect ------------------
     $('.anatomy1').hover(function() {
-        scaleAnimation($(this), 0.03, 200);
         $(".anatomy1").removeAttr("title");
+        scaleAnimation($('.anatomy1'), 0.02, 200, function() {
+            scaleAnimation($('.anatomy1'), 0.01, 250);
+        });
     }, function() {
-        scaleAnimation($(this), 0, 250);
+        scaleAnimation($('.anatomy1'), 0, 200);
     });
 
     $('#storeBtn').hover(function() {
@@ -18,8 +21,8 @@ $(document).ready(function() {
     }, function() {
         scaleAnimation($('#storeBtn'), 0, 300);
     });
-
-    //hovering textures  ----------------------  
+    // -----------------------------------------------------------
+    //hovering textures activates animation ----------------------  
     $('.girld-textures').hover(function() {
         $('.girld').addClass('girlda');
         $(".girld-textures").removeAttr("title");
@@ -42,25 +45,25 @@ $(document).ready(function() {
         $('.soldier').removeClass('soldiera');
         $('.medic').removeClass('medica');
     });    
-    // ----------------------------------------
+    // -----------------------------------------------------------
 
-    $('.anatomy1').click(function() {
-        var name = 'anatomy1a';
-        var obj = this.classList;
-        var classArr = [];
+    // $('.anatomy1').click(function() {
+    //     var name = 'anatomy1a';
+    //     var obj = this.classList;
+    //     var classArr = [];
 
-        for (var key in obj) {
-            if (obj.hasOwnProperty(key)) {
-                classArr.push(obj[key]);
-            }
-        }
+    //     for (var key in obj) {
+    //         if (obj.hasOwnProperty(key)) {
+    //             classArr.push(obj[key]);
+    //         }
+    //     }
 
-        if (classArr.indexOf(name) > -1) {
-            $(this).removeClass(name);
-        } else {
-            $(this).addClass(name);
-        }
-    });
+    //     if (classArr.indexOf(name) > -1) {
+    //         $(this).removeClass(name);
+    //     } else {
+    //         $(this).addClass(name);
+    //     }
+    // });
 
     $('.carousel[data-type="multi"] .item').each(function() {
         var next = $(this).next();
@@ -94,7 +97,7 @@ $(document).ready(function() {
         });
     });
 
-    $('.carousel-col img, .carousel-col div').click(function() {
+    $('.carousel-col img, .carousel-col div, .anatomy1').click(function() {
         $('#myModal .modal-dialog .modal-content .modal-body').html($(this).clone());
         $('#myModal').modal('show');
     });
