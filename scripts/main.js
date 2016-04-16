@@ -1,6 +1,7 @@
 $(document).ready(function() {
     animateAll(['robo1','soldier','medic','girlw','girld']);
-    appearScaleAll(['fa-film', 'fa-cogs', 'glyphicon-time', 'fa-code', 'fa-globe'], 0.2);
+    //appearScaleAll(['fa-film', 'fa-cogs', 'glyphicon-time', 'fa-code', 'fa-globe'], 0.15);
+
     appearScaleAll(['btn-success'], 0.08);
 
     $('.anatomy1').hover(function() {
