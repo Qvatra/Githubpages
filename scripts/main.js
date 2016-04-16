@@ -5,15 +5,6 @@ $(document).ready(function() {
     appearScaleAll(['btn-success'], 0.08);
 
     //hovering activates bouncing scale effect ------------------
-    $('.anatomy1').hover(function() {
-        $(".anatomy1").removeAttr("title");
-        scaleAnimation($('.anatomy1'), 0.02, 200, function() {
-            scaleAnimation($('.anatomy1'), 0.01, 250);
-        });
-    }, function() {
-        scaleAnimation($('.anatomy1'), 0, 200);
-    });
-
     $('#storeBtn').hover(function() {
         scaleAnimation($('#storeBtn'), 0.08, 200, function() {
             scaleAnimation($('#storeBtn'), 0.04, 250);
@@ -65,6 +56,7 @@ $(document).ready(function() {
     //     }
     // });
 
+    //carousel control--------------------------------------------    
     $('.carousel[data-type="multi"] .item').each(function() {
         var next = $(this).next();
         if (!next.length) {
@@ -81,6 +73,23 @@ $(document).ready(function() {
             next.children(':first-child').clone().appendTo($(this));
         //}
     });
+    //------------------------------------------------------------
+    //animation of modal images ---------------------------------
+    $('.carousel-col img, .carousel-col div, .anatomy1').hover(function() {
+        var element = $(this);
+        element.removeAttr("title");
+        scaleAnimation(element, 0.02, 200, function() {
+            //scaleAnimation(element, 0.015, 250);
+        });
+    }, function() {
+        scaleAnimation($(this), 0, 200);
+    });
+    
+    $('.carousel-col img, .carousel-col div, .anatomy1').click(function() {
+        $('#myModal .modal-dialog .modal-content .modal-body').html($(this).clone());
+        $('#myModal').modal('show');
+    });
+    //-----------------------------------------------------------
 
     $('.social').hover(function() {
         var el = $(this);
@@ -95,15 +104,8 @@ $(document).ready(function() {
         scaleAnimation(el, 0.05, 200, function() {
             scaleAnimation(el, 0, 200);
         });
-    });
-
-    $('.carousel-col img, .carousel-col div, .anatomy1').click(function() {
-        $('#myModal .modal-dialog .modal-content .modal-body').html($(this).clone());
-        $('#myModal').modal('show');
-    });
-
+    });    
 });
-
 
 function animateAll(array) {
     array.forEach(function(name, idx) {
