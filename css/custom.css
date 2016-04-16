@@ -654,6 +654,7 @@ body:after{ /*preload sprite images to avoid blinking*/
     /*redefining navbar collapse width*/
     .navbar-header {
         float: none;
+        margin: 0 -15px 0 -15px;
     }
     .navbar-toggle {
         display: block;
@@ -677,9 +678,11 @@ body:after{ /*preload sprite images to avoid blinking*/
     .navbar-collapse.collapse.in { 
         display: block!important;
         overflow: hidden;
+        margin: 0 -24px 0 -24px;
     }
     .collapsing {
         overflow: hidden!important;
+        margin: 0 -24px 0 -24px;
     } 
 }
 
@@ -697,7 +700,8 @@ body:after{ /*preload sprite images to avoid blinking*/
 
     /*redefining navbar collapse width*/
     .navbar-header {
-        float: left; 
+        float: left;
+        margin: 0 -15px 0 -15px; 
     }
     .navbar-toggle {
         display: none; 
