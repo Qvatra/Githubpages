@@ -637,6 +637,27 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-ms-keyframes robo2 { from { background-position: 0px; } to { background-position: -3750px; }}
 @-o-keyframes robo2 { from { background-position: 0px; } to { background-position: -3750px; }}
 @keyframes robo2 { from { background-position: 0px; } to { background-position: -3750px; }}
+
+.zombie {
+    margin: auto;
+    width: 230px;
+    height: 152px;
+}
+
+.zombiea {
+    background-image: url("../images/sprites/zosp31.png");
+    -webkit-animation: zombie 2.5s steps(31) infinite;
+    -moz-animation: zombie 2.5s steps(31) infinite;
+    -ms-animation: zombie 2.5s steps(31) infinite;
+    -o-animation: zombie 2.5s steps(31) infinite;
+    animation: zombie 2.5s steps(31) infinite;
+}
+
+@-webkit-keyframes zombie { from { background-position: 0px; } to { background-position: -7130px; }}
+@-moz-keyframes zombie { from { background-position: 0px; } to { background-position: -7130px; }}
+@-ms-keyframes zombie { from { background-position: 0px; } to { background-position: -7130px; }}
+@-o-keyframes zombie { from { background-position: 0px; } to { background-position: -7130px; }}
+@keyframes zombie { from { background-position: 0px; } to { background-position: -7130px; }}
 /*Carousel*/
 /*=============================================================================*/
 .carousel-control { 
