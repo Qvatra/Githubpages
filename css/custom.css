@@ -611,6 +611,28 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-ms-keyframes turret { from { background-position: 0px; } to { background-position: -5220px; }}
 @-o-keyframes turret { from { background-position: 0px; } to { background-position: -5220px; }}
 @keyframes turret { from { background-position: 0px; } to { background-position: -5220px; }}
+
+.robo2 {
+    margin: auto;
+    width: 150px;
+    height: 147px;
+    background-image: url("../images/sprites/r2sp25.png");
+}
+
+.robo2a {
+    background-image: url("../images/sprites/r2sp25.png");
+    -webkit-animation: robo2 3.5s steps(25) infinite;
+    -moz-animation: robo2 3.5s steps(25) infinite;
+    -ms-animation: robo2 3.5s steps(25) infinite;
+    -o-animation: robo2 3.5s steps(25) infinite;
+    animation: robo2 3.5s steps(25) infinite;
+}
+
+@-webkit-keyframes robo2 { from { background-position: 0px; } to { background-position: -3750px; }}
+@-moz-keyframes robo2 { from { background-position: 0px; } to { background-position: -3750px; }}
+@-ms-keyframes robo2 { from { background-position: 0px; } to { background-position: -3750px; }}
+@-o-keyframes robo2 { from { background-position: 0px; } to { background-position: -3750px; }}
+@keyframes robo2 { from { background-position: 0px; } to { background-position: -3750px; }}
 /*Carousel*/
 /*=============================================================================*/
 .carousel-control { 
