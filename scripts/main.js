@@ -82,7 +82,14 @@ $(document).ready(function() {
             //scaleAnimation(element, 0.015, 250);
         });
     }, function() {
-        scaleAnimation($(this), 0, 200);
+        var element = $(this);
+        if (element.is(':animated')) { // fixed: quick hover-unhover blocks unhover animation 
+            window.setTimeout(function() {
+                scaleAnimation(element, 0, 200);
+            }, 200);
+        } else {
+            scaleAnimation(element, 0, 200);
+        }
     });
     
     $('.carousel-col img, .carousel-col div, .anatomy1').click(function() {
