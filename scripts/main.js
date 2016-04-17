@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    animateAll(['robo1','soldier','medic','girlw','girld']);
+    animateAll(['robo1', 'soldier', 'medic', 'girlw', 'girld']);
     //appearScaleAll(['fa-film', 'fa-cogs', 'glyphicon-time', 'fa-code', 'fa-globe'], 0.15);
 
     appearScaleAll(['btn-success'], 0.08);
@@ -35,27 +35,8 @@ $(document).ready(function() {
     }, function() {
         $('.soldier').removeClass('soldiera');
         $('.medic').removeClass('medica');
-    });    
+    });
     // -----------------------------------------------------------
-
-    // $('.anatomy1').click(function() {
-    //     var name = 'anatomy1a';
-    //     var obj = this.classList;
-    //     var classArr = [];
-
-    //     for (var key in obj) {
-    //         if (obj.hasOwnProperty(key)) {
-    //             classArr.push(obj[key]);
-    //         }
-    //     }
-
-    //     if (classArr.indexOf(name) > -1) {
-    //         $(this).removeClass(name);
-    //     } else {
-    //         $(this).addClass(name);
-    //     }
-    // });
-
     //carousel control--------------------------------------------    
     $('.carousel[data-type="multi"] .item').each(function() {
         var next = $(this).next();
@@ -65,42 +46,46 @@ $(document).ready(function() {
         next.children(':first-child').clone().appendTo($(this));
 
         //for (var i = 0; i < 1; i++) { // here 1 for max 3 items, 2 for 4, 3 for 5...
-            next = next.next();
-            if (!next.length) {
-                next = $(this).siblings(':first');
-            }
-
-            next.children(':first-child').clone().appendTo($(this));
+        next = next.next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
         //}
     });
     //------------------------------------------------------------
     //animation of modal images ---------------------------------
-    $('.carousel-col img, .carousel-col div, .anatomy1').hover(function() {
+    $('.carousel-ratio-background, .software-img').hover(function() {
         var element = $(this);
-        element.removeAttr("title");
-        scaleAnimation(element, 0.02, 200, function() {
-            //scaleAnimation(element, 0.015, 250);
+        element.children().children().removeAttr("title");
+        scaleAnimation(element, 0.04, 200, function() {
+            scaleAnimation(element.children(), -0.015, 200);
         });
     }, function() {
         var element = $(this);
-        if (element.is(':animated')) { // fixed: quick hover-unhover blocks unhover animation 
-            window.setTimeout(function() {
-                scaleAnimation(element, 0, 200);
-            }, 200);
+        if (element.is(':animated')) { // fixed: unhover during animation blocks unhover animation 
+            window.setTimeout(scaleBack, 200);
         } else {
+            scaleBack();
+        }
+
+        function scaleBack() {
             scaleAnimation(element, 0, 200);
+            scaleAnimation(element.children(), 0, 200);
         }
     });
-    
-    $('.carousel-col img, .carousel-col div, .anatomy1').click(function() {
-        $('#myModal .modal-dialog .modal-content .modal-body').html($(this).clone());
+
+    $('.carousel-col img, .carousel-col .centered, .anatomy1').click(function() {
+        var clone = $(this).clone();
+        clone.css("transform", "none"); // remove hover-scale effect
+        $('#myModal .modal-dialog .modal-content .modal-body').html(clone);
         $('#myModal').modal('show');
     });
     //-----------------------------------------------------------
 
     $('.social').hover(function() {
         var el = $(this);
-        rotateAnimation(el, 0, -400, 300, function() { 
+        rotateAnimation(el, 0, -400, 300, function() {
             rotateAnimation(el, -400, 40, 200);
         });
     }, function() {
@@ -111,7 +96,7 @@ $(document).ready(function() {
         scaleAnimation(el, 0.05, 200, function() {
             scaleAnimation(el, 0, 200);
         });
-    });    
+    });
 });
 
 function animateAll(array) {
@@ -218,21 +203,21 @@ function appearActivation(element, callback) {
 }
 
 function elementInViewport(el) {
-  var top = el.offsetTop;
-  var left = el.offsetLeft;
-  var width = el.offsetWidth;
-  var height = el.offsetHeight;
+    var top = el.offsetTop;
+    var left = el.offsetLeft;
+    var width = el.offsetWidth;
+    var height = el.offsetHeight;
 
-  while(el.offsetParent) {
-    el = el.offsetParent;
-    top += el.offsetTop;
-    left += el.offsetLeft;
-  }
+    while (el.offsetParent) {
+        el = el.offsetParent;
+        top += el.offsetTop;
+        left += el.offsetLeft;
+    }
 
-  return (
-    top >= window.pageYOffset &&
-    left >= window.pageXOffset &&
-    (top + height) <= (window.pageYOffset + window.innerHeight) &&
-    (left + width) <= (window.pageXOffset + window.innerWidth)
-  );
+    return (
+        top >= window.pageYOffset &&
+        left >= window.pageXOffset &&
+        (top + height) <= (window.pageYOffset + window.innerHeight) &&
+        (left + width) <= (window.pageXOffset + window.innerWidth)
+    );
 }

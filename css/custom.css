@@ -373,9 +373,20 @@ pre code {
     max-width: 800px;
 }
 
-.right {
+.float-right {
     float: right;
 }
+
+ .center-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+ }
+ .center-wrapper > .centered {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+ }
 
 .red { background: red; }
 .green { background: green; }
@@ -419,19 +430,7 @@ body:after{ /*preload sprite images to avoid blinking*/
     width: 100%;
     cursor: pointer;
     border: 1px solid lightgrey;
-    /*-webkit-transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
-    -moz-transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
-    -o-transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;
-    transition: width 0.15s ease-in-out, margin 0.15s ease-in-out;*/
 }
-
-/*.anatomy1a {
-    -ms-transform: scale(1.0) !important;
-    -webkit-transform: scale(1.0) !important;
-    transform: scale(1.0) !important;
-    width: 100%;
-    margin: 0 0 10px 0;
-}*/
 
 .robo1 {
     margin: 15px 15px 0 0;
@@ -574,6 +573,44 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-ms-keyframes girld { from { background-position: 0px; } to { background-position: -6755px; }}
 @-o-keyframes girld { from { background-position: 0px; } to { background-position: -6755px; }}
 @keyframes girld { from { background-position: 0px; } to { background-position: -6755px; }}
+
+.turret {
+    margin: auto;
+    width: 180px;
+    height: 146px;
+    background-image: url("../images/sprites/turret29.png");
+}
+
+/*.active .turret {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+.left .turret,
+.right .turret {
+    -webkit-transition: opacity 0.7s ease-in-out;
+    -moz-transition: opacity 0.7s ease-in-out;
+    -o-transition: opacity 0.7s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
+    opacity: 0;
+}*/
+
+.turreta {
+    background-image: url("../images/sprites/turret29.png");
+    -webkit-animation: turret 3.5s steps(29) infinite;
+    -moz-animation: turret 3.5s steps(29) infinite;
+    -ms-animation: turret 3.5s steps(29) infinite;
+    -o-animation: turret 3.5s steps(29) infinite;
+    animation: turret 3.5s steps(29) infinite;
+}
+
+@-webkit-keyframes turret { from { background-position: 0px; } to { background-position: -5220px; }}
+@-moz-keyframes turret { from { background-position: 0px; } to { background-position: -5220px; }}
+@-ms-keyframes turret { from { background-position: 0px; } to { background-position: -5220px; }}
+@-o-keyframes turret { from { background-position: 0px; } to { background-position: -5220px; }}
+@keyframes turret { from { background-position: 0px; } to { background-position: -5220px; }}
 /*Carousel*/
 /*=============================================================================*/
 .carousel-control { 
@@ -614,13 +651,30 @@ body:after{ /*preload sprite images to avoid blinking*/
     float: left;
     cursor: pointer;
  }
- .carousel-col > img {
+  .carousel-col img {
     background: rgb(190, 224, 255);
-    padding: 5px;
+    padding: 2px;
+ }
+ .carousel-ratio {
+    position: relative;
+ }
+ .carousel-ratio:after { /*keeps aspect ratio*/
+    padding-top: 73.7%;
+    display: block;
+    content: '';
+ }
+ .carousel-ratio > .carousel-ratio-background {
+    background: rgb(190, 224, 255);
+    position: absolute;
+    top: 2px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: -2px 0px;
  }
  .active > div { display:none; }
  .active > div:first-child { display:block; }
-
+ 
 /*Modal*/
 /*=============================================================================*/
 .close-modal {
