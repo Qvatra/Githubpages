@@ -1,8 +1,9 @@
 $(document).ready(function() {
     setInterval(function() {
         var val = +$("#countdown").html();
-        $("#countdown").html(val - 1);
-
+        if (val > 0) {
+            $("#countdown").html(val - 1);
+        }
         if (val === 1) {
             $('#content').fadeOut(500, redirect);
         }
