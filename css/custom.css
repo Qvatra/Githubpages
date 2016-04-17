@@ -559,6 +559,12 @@ body:after{ /*preload sprite images to avoid blinking*/
     background-image: url("../images/girld1st.png");
 }
 
+.carousel-girld {
+    margin: auto;
+    width: 193px;
+    height: 168px;
+}
+
 .girlda {
     background-image: url("../images/girld.png");
     -webkit-animation: girld 2.5s steps(35) infinite;
@@ -578,7 +584,6 @@ body:after{ /*preload sprite images to avoid blinking*/
     margin: auto;
     width: 180px;
     height: 146px;
-    background-image: url("../images/sprites/turret29.png");
 }
 
 /*.active .turret {
@@ -616,7 +621,6 @@ body:after{ /*preload sprite images to avoid blinking*/
     margin: auto;
     width: 150px;
     height: 147px;
-    background-image: url("../images/sprites/r2sp25.png");
 }
 
 .robo2a {

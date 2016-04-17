@@ -59,7 +59,11 @@ $(document).ready(function() {
         var element = $(this);
         element.children().children().removeAttr("title");
         scaleAnimation(element, 0.04, 200, function() {
-            scaleAnimation(element.children(), -0.015, 200);
+            if (element.children().children()[0].tagName === 'IMG') {
+                scaleAnimation(element.children(), -0.015, 200); // nicer onhover transition for images
+            } else {
+                scaleAnimation(element.children(), -0.04, 200); // animations look better in focus(total scale = 1)
+            }
         });
     }, function() {
         var element = $(this);
@@ -70,8 +74,14 @@ $(document).ready(function() {
         }
 
         function scaleBack() {
-            scaleAnimation(element, 0, 200);
-            scaleAnimation(element.children(), 0, 200);
+            if (element.children().children()[0].tagName === 'IMG') {
+                scaleAnimation(element, 0, 200);
+                scaleAnimation(element.children(), 0, 200);
+            } else {
+                scaleAnimation(element, 0, 200, function() {
+                    scaleAnimation(element.children(), 0, 200);
+                });
+            }
         }
     });
 
