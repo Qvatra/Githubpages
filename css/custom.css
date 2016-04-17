@@ -396,7 +396,7 @@ pre code {
 /*=============================================================================*/
 body:after{ /*preload sprite images to avoid blinking*/
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-    content: url("../images/robo1.png") url("../images/soldier.png") url("../images/medic.png") url("../images/girlw.png") url("../images/girld.png");
+    content: url("../images/robo1.png") url("../images/soldier.png") url("../images/medic.png") url("../images/girlw.png") url("../images/sprites/gdsp35.png");
 }
 
 .soldiers-caption {
@@ -566,7 +566,7 @@ body:after{ /*preload sprite images to avoid blinking*/
 }
 
 .girlda {
-    background-image: url("../images/girld.png");
+    background-image: url("../images/sprites/gdsp35.png");
     -webkit-animation: girld 2.5s steps(35) infinite;
     -moz-animation: girld 2.5s steps(35) infinite;
     -ms-animation: girld 2.5s steps(35) infinite;
