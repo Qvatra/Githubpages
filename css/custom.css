@@ -748,7 +748,8 @@ body:after{ /*preload sprite images to avoid blinking*/
 /*Media Queries*/
 /*=============================================================================*/
 /*xxs*/
-@media (min-width: 100px) and (max-width: 479px) {
+@media (min-width: 100px) and (max-width: 519px) {
+    .carousel {max-width: 300px; margin: auto;}
     .header {padding-top: 10px; padding-bottom: 10px;}
     h1 {font-size: 30px}
     h2 {font-size: 22px}
@@ -796,7 +797,7 @@ body:after{ /*preload sprite images to avoid blinking*/
 }
 
 /*xs*/
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 520px) and (max-width: 767px) {
     .header {padding-top: 15px; padding-bottom: 15px;}
     h1 {font-size: 36px}
     .feature-icon { left: -8px;}
