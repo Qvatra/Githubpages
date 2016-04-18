@@ -658,6 +658,48 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-ms-keyframes zombie { from { background-position: 0px; } to { background-position: -7130px; }}
 @-o-keyframes zombie { from { background-position: 0px; } to { background-position: -7130px; }}
 @keyframes zombie { from { background-position: 0px; } to { background-position: -7130px; }}
+
+.c-medic {
+    margin: auto;
+    width: 210px;
+    height: 129px;
+}
+
+.c-medica {
+    background-image: url("../images/sprites/mesp28.png");
+    -webkit-animation: c-medic 3.5s steps(28) infinite;
+    -moz-animation: c-medic 3.5s steps(28) infinite;
+    -ms-animation: c-medic 3.5s steps(28) infinite;
+    -o-animation: c-medic 3.5s steps(28) infinite;
+    animation: c-medic 3.5s steps(28) infinite;
+}
+
+@-webkit-keyframes c-medic { from { background-position: 0px; } to { background-position: -5880px; }}
+@-moz-keyframes c-medic { from { background-position: 0px; } to { background-position: -5880px; }}
+@-ms-keyframes c-medic { from { background-position: 0px; } to { background-position: -5880px; }}
+@-o-keyframes c-medic { from { background-position: 0px; } to { background-position: -5880px; }}
+@keyframes c-medic { from { background-position: 0px; } to { background-position: -5880px; }}
+
+.c-soldier {
+    margin: auto;
+    width: 210px;
+    height: 129px;
+}
+
+.c-soldiera {
+    background-image: url("../images/sprites/sosp33.png");
+    -webkit-animation: c-soldier 3.5s steps(33) infinite;
+    -moz-animation: c-soldier 3.5s steps(33) infinite;
+    -ms-animation: c-soldier 3.5s steps(33) infinite;
+    -o-animation: c-soldier 3.5s steps(33) infinite;
+    animation: c-soldier 3.5s steps(33) infinite;
+}
+
+@-webkit-keyframes c-soldier { from { background-position: 0px; } to { background-position: -6930px; }}
+@-moz-keyframes c-soldier { from { background-position: 0px; } to { background-position: -6930px; }}
+@-ms-keyframes c-soldier { from { background-position: 0px; } to { background-position: -6930px; }}
+@-o-keyframes c-soldier { from { background-position: 0px; } to { background-position: -6930px; }}
+@keyframes c-soldier { from { background-position: 0px; } to { background-position: -6930px; }}
 /*Carousel*/
 /*=============================================================================*/
 .carousel-control { 
