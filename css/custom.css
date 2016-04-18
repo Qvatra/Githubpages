@@ -699,7 +699,7 @@ body:after{ /*preload sprite images to avoid blinking*/
     cursor: pointer;
  }
   .carousel-col img {
-    background: rgb(190, 224, 255);
+    /*background: rgb(190, 224, 255);*/
     padding: 2px;
  }
  .carousel-ratio {
@@ -711,7 +711,7 @@ body:after{ /*preload sprite images to avoid blinking*/
     content: '';
  }
  .carousel-ratio > .carousel-ratio-background {
-    background: rgb(190, 224, 255);
+    background: rgb(224, 224, 224);
     position: absolute;
     top: 2px;
     bottom: 0;
