@@ -17,10 +17,16 @@ body {
   color: #6d6d6d;
   overflow-x: hidden;
   background: #e7e7e7; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left,#e7e7e7, white, #e7e7e7, #e7e7e7); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(left,#e7e7e7, white, #e7e7e7, #e7e7e7);      /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(left,#e7e7e7, white, #e7e7e7, #e7e7e7);    /* For Fx 3.6 to 15 */
-  background: linear-gradient(to right, #e7e7e7, white, #e7e7e7, #e7e7e7);    /* Standard syntax */
+  /*background: -webkit-linear-gradient(left,#e7e7e7, white, #e7e7e7, #e7e7e7);
+  background: -o-linear-gradient(left,#e7e7e7, white, #e7e7e7, #e7e7e7);
+  background: -moz-linear-gradient(left,#e7e7e7, white, #e7e7e7, #e7e7e7);
+  background: linear-gradient(to right, #e7e7e7, white, #e7e7e7, #e7e7e7);*/
+  
+  background: -webkit-linear-gradient(left,#e7e7e7, white, #e7e7e7, #e7e7e7, rgb(247, 247, 247), #e7e7e7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left,#e7e7e7, white, #e7e7e7, #e7e7e7, rgb(247, 247, 247), #e7e7e7);      /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left,#e7e7e7, white, #e7e7e7, #e7e7e7, rgb(247, 247, 247), #e7e7e7);    /* For Fx 3.6 to 15 */
+  background: linear-gradient(to right, #e7e7e7, white, #e7e7e7, #e7e7e7, rgb(247, 247, 247), #e7e7e7);    /* Standard syntax */
+ 
 }
 
 .colorContainer {
@@ -396,7 +402,7 @@ pre code {
 /*=============================================================================*/
 body:after{ /*preload sprite images to avoid blinking*/
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-    content: url("../images/robo1.png") url("../images/soldier.png") url("../images/medic.png") url("../images/girlw.png") url("../images/sprites/gdsp35.png");
+    content: url("../images/robo1.png") url("../images/sprites/s3sp30.png") url("../images/sprites/m1sp27.png") url("../images/girlw.png") url("../images/sprites/gdsp35.png");
 }
 
 .soldiers-caption {
@@ -463,10 +469,6 @@ body:after{ /*preload sprite images to avoid blinking*/
 .soldier-medic {
     margin: 0 0 0 15px;
     float: right;
-    background: -webkit-radial-gradient(#D0D0D0, #e7e7e7, #e7e7e7); /* Safari 5.1-6.0 */
-    background: -o-radial-gradient(#D0D0D0, #e7e7e7, #e7e7e7); /* For Opera 11.6-12.0 */
-    background: -moz-radial-gradient(#D0D0D0, #e7e7e7, #e7e7e7); /* For Firefox 3.6-15 */
-    background: radial-gradient(#D0D0D0, #e7e7e7, #e7e7e7); /* Standard syntax */
 }
 
 .soldier {
@@ -477,7 +479,7 @@ body:after{ /*preload sprite images to avoid blinking*/
 }
 
 .soldiera {
-    background-image: url("../images/soldier.png");
+    background-image: url("../images/sprites/s3sp30.png");
     -webkit-animation: soldier 4s steps(30) infinite;
     -moz-animation: soldier 4s steps(30) infinite;
     -ms-animation: soldier 4s steps(30) infinite;
@@ -498,7 +500,7 @@ body:after{ /*preload sprite images to avoid blinking*/
 }
 
 .medica {
-    background-image: url("../images/medic.png");
+    background-image: url("../images/sprites/m1sp27.png");
     -webkit-animation: medic 3.5s steps(27) infinite;
     -moz-animation: medic 3.5s steps(27) infinite;
     -ms-animation: medic 3.5s steps(27) infinite;
@@ -586,22 +588,6 @@ body:after{ /*preload sprite images to avoid blinking*/
     height: 146px;
 }
 
-/*.active .turret {
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    -o-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 1;
-}
-.left .turret,
-.right .turret {
-    -webkit-transition: opacity 0.7s ease-in-out;
-    -moz-transition: opacity 0.7s ease-in-out;
-    -o-transition: opacity 0.7s ease-in-out;
-    transition: opacity 0.7s ease-in-out;
-    opacity: 0;
-}*/
-
 .turreta {
     background-image: url("../images/sprites/turret29.png");
     -webkit-animation: turret 3.5s steps(29) infinite;
@@ -659,27 +645,6 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-o-keyframes zombie { from { background-position: 0px; } to { background-position: -7130px; }}
 @keyframes zombie { from { background-position: 0px; } to { background-position: -7130px; }}
 
-.c-medic {
-    margin: auto;
-    width: 210px;
-    height: 129px;
-}
-
-.c-medica {
-    background-image: url("../images/sprites/mesp28.png");
-    -webkit-animation: c-medic 3.5s steps(28) infinite;
-    -moz-animation: c-medic 3.5s steps(28) infinite;
-    -ms-animation: c-medic 3.5s steps(28) infinite;
-    -o-animation: c-medic 3.5s steps(28) infinite;
-    animation: c-medic 3.5s steps(28) infinite;
-}
-
-@-webkit-keyframes c-medic { from { background-position: 0px; } to { background-position: -5880px; }}
-@-moz-keyframes c-medic { from { background-position: 0px; } to { background-position: -5880px; }}
-@-ms-keyframes c-medic { from { background-position: 0px; } to { background-position: -5880px; }}
-@-o-keyframes c-medic { from { background-position: 0px; } to { background-position: -5880px; }}
-@keyframes c-medic { from { background-position: 0px; } to { background-position: -5880px; }}
-
 .c-soldier {
     margin: auto;
     width: 210px;
@@ -687,7 +652,7 @@ body:after{ /*preload sprite images to avoid blinking*/
 }
 
 .c-soldiera {
-    background-image: url("../images/sprites/sosp33.png");
+    background-image: url("../images/sprites/s1sp33.png");
     -webkit-animation: c-soldier 3.5s steps(33) infinite;
     -moz-animation: c-soldier 3.5s steps(33) infinite;
     -ms-animation: c-soldier 3.5s steps(33) infinite;
@@ -700,6 +665,27 @@ body:after{ /*preload sprite images to avoid blinking*/
 @-ms-keyframes c-soldier { from { background-position: 0px; } to { background-position: -6930px; }}
 @-o-keyframes c-soldier { from { background-position: 0px; } to { background-position: -6930px; }}
 @keyframes c-soldier { from { background-position: 0px; } to { background-position: -6930px; }}
+
+.c-soldier2 {
+    margin: auto;
+    width: 210px;
+    height: 140px;
+}
+
+.c-soldier2a {
+    background-image: url("../images/sprites/s2sp33.png");
+    -webkit-animation: c-soldier2 3.5s steps(33) infinite;
+    -moz-animation: c-soldier2 3.5s steps(33) infinite;
+    -ms-animation: c-soldier2 3.5s steps(33) infinite;
+    -o-animation: c-soldier2 3.5s steps(33) infinite;
+    animation: c-soldier2 3.0s steps(33) infinite;
+}
+
+@-webkit-keyframes c-soldier2 { from { background-position: 0px; } to { background-position: -6930px; }}
+@-moz-keyframes c-soldier2 { from { background-position: 0px; } to { background-position: -6930px; }}
+@-ms-keyframes c-soldier2 { from { background-position: 0px; } to { background-position: -6930px; }}
+@-o-keyframes c-soldier2 { from { background-position: 0px; } to { background-position: -6930px; }}
+@keyframes c-soldier2 { from { background-position: 0px; } to { background-position: -6930px; }}
 /*Carousel*/
 /*=============================================================================*/
 .carousel-control { 
@@ -761,6 +747,18 @@ body:after{ /*preload sprite images to avoid blinking*/
     left: 0;
     margin: -2px 0px;
  }
+ .carousel-ratio-background > .gradient-background {
+    width: 100%;
+    height: 100%;
+    background: -webkit-radial-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)); /* Safari 5.1-6.0 */
+    background: -o-radial-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)); /* For Opera 11.6-12.0 */
+    background: -moz-radial-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)); /* For Firefox 3.6-15 */
+    background: radial-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0)); /* Standard syntax */
+}
+ .carousel-ratio-background > .transparent-background {
+    width: 100%;
+    height: 100%;
+  }
  .active > div { display:none; }
  .active > div:first-child { display:block; }
  

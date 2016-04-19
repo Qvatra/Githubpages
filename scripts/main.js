@@ -57,12 +57,12 @@ $(document).ready(function() {
     //animation of modal images ---------------------------------
     $('.carousel-ratio-background, .software-img').hover(function() {
         var element = $(this);
-        element.children().children().removeAttr("title");
+        element.children().children().children().removeAttr("title");
         scaleAnimation(element, 0.04, 200, function() {
-            if (element.children().children()[0].tagName === 'IMG') {
-                scaleAnimation(element.children(), -0.015, 200); // nicer onhover transition for images
+            if (element.children().children().children()[0].tagName === 'IMG') {
+                scaleAnimation(element.children().children(), -0.015, 200); // nicer onhover transition for images
             } else {
-                scaleAnimation(element.children(), -0.04, 200); // animations look better in focus(total scale = 1)
+                scaleAnimation(element.children().children(), -0.04, 200); // animations look better in focus(total scale = 1)
             }
         });
     }, function() {
@@ -74,12 +74,12 @@ $(document).ready(function() {
         }
 
         function scaleBack() {
-            if (element.children().children()[0].tagName === 'IMG') {
+            if (element.children().children().children()[0].tagName === 'IMG') {
                 scaleAnimation(element, 0, 200);
-                scaleAnimation(element.children(), 0, 200);
+                scaleAnimation(element.children().children(), 0, 200);
             } else {
                 scaleAnimation(element, 0, 200, function() {
-                    scaleAnimation(element.children(), 0, 200);
+                    scaleAnimation(element.children().children(), 0, 200);
                 });
             }
         }
