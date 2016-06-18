@@ -1,1 +1,8 @@
 1) minification for production
+2) content refactor -> 2 pages
+3) sitemap for 2 pages
+4) content SEO (accents h1/h2..)
+5) Carousel text
+6) Tags: character animation
+7) attraction landing page / animated header
+8) facebook
